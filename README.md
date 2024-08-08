@@ -1,2 +1,2 @@
-# CMCS-478
-UMBC: CMCS-478 Introduction to Machine Learning
+# CMSC-478
+UMBC: CMSC-478 Introduction to Machine Learning
