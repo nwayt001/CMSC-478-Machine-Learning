@@ -1,0 +1,5 @@
+dataset notes:
+
+    Type:    Two class (binary), continous features (2-dimensional)
+    Szie: 400 samples x 2 features (for train and test)
+    labesl: class 0 and class 1
