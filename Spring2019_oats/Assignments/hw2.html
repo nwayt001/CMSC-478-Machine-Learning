@@ -1,0 +1,79 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"></head><body><h2>CMSC 478 Spring 2019 - Homework 2</h2>
+
+<p>
+
+<b>Due at the start of class on February 21</b>
+
+</p><p>
+
+In this homework you will implement k-means clustering and experiment
+with different ways of initializing the cluster centroids.
+
+</p><p>
+
+The <a href="http://yann.lecun.com/exdb/mnist/">MNIST dataset</a> is a
+well-studied collection of handwritten digits.  It is often used to
+test multi-class classification algorithms, where there is one class
+for each of the 10 digits (0 - 9).  In this homework, you will use it for
+unsupervised clustering.
+
+</p><p>
+
+I've made two files available for you:
+</p><ul>
+<li> <a href="https://courses.cs.umbc.edu/undergraduate/478/spring2019/mnist_data.txt">The raw MNIST data</a>, which is a text file
+  containing 10,000 rows. Each row contains 28 * 28 = 784 integers in
+  the range 0 to 255. 
+  Each integer is the pixel value from a 28 x 28 image of a
+  handwritten digit.  Every row corresponds to a vector in the dataset
+  that is to be clustered.
+</li><li> <a href="https://courses.cs.umbc.edu/undergraduate/478/spring2019/mnist_labels.txt">The labels for the raw data</a> are in a file with
+  10,000 rows.  The first row contains the correct digit label for the
+  first row in the raw data.  The second row is the label for the
+  second instance, and so on.
+</li></ul>
+
+<p>
+
+Implement the k-means clustering algorithm.  You will only use your
+algorithm for this dataset, so you can hard-wire in the number of
+instances and the size of each instance.  The goal is not to write a
+generic version of the algorithm (though you can if you wish).  The
+goal is to understand how it works on real data.  You will need to try
+different values of k so that must be a parameter.
+
+</p><p>
+
+After completing the implementation (and testing for correctness, of
+course), do the following:
+</p><ul>
+<li> Randomly sample k = 10 instances, use them as the initial cluster
+  centroids, and run the algorithm to covergence.  For each cluster,
+  find the most common digit in that cluster and count the number of
+  instances in the cluster that are different from the most common
+  one.  Sum that count over all of the clusters.
+</li><li> Repeat the above step 10 times in total and report the average
+  number of iterations to convergence and the average number of
+  instances that are in the wrong cluster.
+</li><li> Run the algorithm with k = 5.  Look at the clusters and see if
+  there are digits that tend to get grouped together.  What are they
+  and explain why you think they are grouped into the same cluster.
+</li><li> Finally, run the algorithm 10 times again with k = 10 and report
+  the same information as above (iterations to convergence and number
+  of wrongly clustered instances).  But this time do not choose random
+  instances for the cluster centroids.  Randomly choose an instance
+  that represents each of the digits and use them as the centroids.
+  That is, one of the centroids will be a randomly chose 0, another
+  will be a randomly chose 1, and so on.
+  Do you observe any difference in the performance statistics?  Why or
+  why not?
+</li><li> Turn in hard copy of your code, the items specified above, and
+  visualizations of the cluster centroids (all 10 of them) for one
+  run.  To help with that, you can grab <a href="https://courses.cs.umbc.edu/undergraduate/478/spring2019/MNIST%20Display.ipynb">this notebook</a> that shows how
+  to read in the MNIST data and visualize it.  It assumes that the
+  values are 8-bit integers.  Your centroids will be floats.
+</li></ul>
+
+
+</body></html>

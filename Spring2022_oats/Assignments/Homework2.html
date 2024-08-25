@@ -1,0 +1,120 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"></head><body><h2>CMSC 478 Spring 2022 - Homework 2</h2>
+
+<p>
+
+<b>Due at the start of class on Wednesday March 2nd</b>
+
+</p><p>
+
+</p><hr>
+
+<p>
+  
+<b>(1)</b> Consider the following decision tree:
+
+</p><p>
+
+<img src="Homework2_files/tree.jpg" height="250">
+
+</p><p>
+
+Draw the decision boundaries
+defined by this tree.  Each leaf is labeled with a letter.  Write this
+letter in the corresponding region of the instance space.
+
+</p><p>
+
+Give another decision tree that is
+syntactically different but defines the same decision boundaries.
+Your answer must be in the form of a decision tree.  This demonstrates
+that the space of decision trees is syntactically redundant.
+
+</p><p>
+
+  </p><hr>
+
+  <p>
+  
+</p><p>
+  
+<b>(2)</b> 
+
+Consider the following dataset with four binary
+attributes and one binary class label.
+
+
+</p><p>
+
+<img src="Homework2_files/table.png" height="250">
+
+</p><p>
+
+Use equation 3.4 from the Mitchell chapter on decision trees to
+compute information gain for each attribute to choose the root split
+for the tree. Give the computed information gain for each attribute
+and indicate which attribute should be used at the root of the tree.
+
+</p><p>
+  
+Draw the full, unpruned tree that would be learned from this dataset. 
+There is no need to do the full information gain computation for the 
+splits below the root. Just “eyeball” the data and the correct splits 
+should be obvious.
+
+</p><p>
+
+  </p><hr>
+
+  <p>
+  
+<b>(3)</b> Suppose you want to train a perceptron on the following
+dataset: 
+
+
+</p><p>
+
+<table style="width:25%">
+  <tbody><tr>
+    <td>X1</td>
+    <td>X2</td> 
+    <td>Y</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>6</td> 
+    <td>-1</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>3</td> 
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>9</td> 
+    <td>1</td>
+  </tr>
+</tbody></table>
+
+</p><p>
+
+Give a brief intuitive explanation
+for why the perceptron cannot learn this task.  Then give a proof
+using inequalities expressed in terms of the weights W1, W2, and b.
+Recall that y*a must be &gt; 0 for the perceptron to classify an
+instance correctly.  You should show that this condition cannot be
+satisfied simultaneously for all 3 instances above for any W1, W2, and b.
+</p><p>
+
+Imagine that we modify the
+perceptron algorithm given in the book so that it always updates the
+weights.  That is, we don't first check to see if y*a ≤ 0 before
+doing a weight update.  Is the resulting algorithm still correct?
+That is, will it still be able to classify linearly separable data
+perfectly?  Why or why not?  Will the weights eventually converge and cease
+to change?  Why or why not?  If they don't converge, characterize what
+happens to them as the number of iterations grows large.
+
+
+</p></body></html>

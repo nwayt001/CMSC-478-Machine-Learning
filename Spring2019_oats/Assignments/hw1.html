@@ -1,0 +1,58 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"></head><body><h2>CMSC 478 Spring 2019 - Homework 1</h2>
+
+<p>
+
+<b>Due at the start of class on February 14</b>
+
+</p><p>
+
+</p><p>
+
+Install scikit-learn for Python.  If you are a Windows user, download
+the latext WinPython distribution
+from <a href="https://sourceforge.net/projects/winpython/files/">here</a>.
+Go through the installation process, and find "IPython QT Console" and
+run it.  That will give you a Python command prompt with all of the
+packages you need.  If you are a Linux
+user, <a href="https://stackoverflow.com/questions/36384447/how-to-install-sklearn/36384535">this</a>
+Stack Overflow question and answer shows you how to install it. 
+
+</p><p>
+
+Once you've got Python and scikit-learn running, <b>execute the following
+code and submit the output.</b>
+
+</p><pre>from sklearn import datasets
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.model_selection import cross_val_score
+import numpy as np
+
+
+digits = datasets.load_digits()
+
+for n in range(1, 501, 50):
+    clf = KNeighborsClassifier(n_neighbors = n)
+    scores = cross_val_score(clf, digits.data, digits.target, cv = 10)
+    print('k = %d, acc = %.2f' % (n, np.mean(scores)))
+</pre>
+
+You'll notice that the cross-validated accuracy scores are
+decreasing.  <b>Explain why that is happening in a sentence or two.</b>
+
+<p>
+
+Consider the following decision tree:
+
+</p><p>
+
+<img src="hw1_files/tree.jpg" height="250">
+
+</p><p>
+
+<b> Draw the decision boundaries
+defined by this tree.  Each leaf is labeled with a letter.  Write this
+letter in the corresponding region of instance space.
+
+
+</b></p></body></html>

@@ -1,0 +1,62 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"></head><body><h2>CMSC 478 Spring 2022 - Homework 5</h2>
+
+<p>
+
+<b>Due at the start of class on Monday March 9th</b>
+
+</p><p>
+
+</p><hr>
+
+<p>
+  
+Get the example PyTorch CNN code that learns to classify CIFAR 10
+images from  here:
+
+</p><pre>https://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html</pre>
+
+There are links at the top of that page to download the notebook
+directly and to see it on GitHub where you can download it as well.
+
+<p>
+
+  Here are your tasks and what you'll need to turn in for each of them:
+  </p><ul>
+    <li> Run the notebook once without any modifications up to, but
+    not including, the cell that explains how to run on a GPU.
+    Running on the CPU will be fine for this homework.  The last cell
+    you'll run shows the accuracy of the CNN for each of the 10
+    classes on the test data.  Submit those accuracies as the first
+      thing in your writeup.
+    </li><li> Experiment with several (at least 4) ways of improving the
+      accuracy of the CNN.  Some things you can consider include:
+      <ul>
+	<li> Running training longer
+	</li><li> Changing the learning rate and other hyperparameters
+	</li><li> Increase or decrease the number of convolutional filters
+	</li><li> Change the number or sizes of the fully connected layers
+	</li><li> Change the size/stride of the filters
+	</li><li> Add more convolutional layers
+	</li><li> Try a nonlinearity other than ReLIU
+	</li><li> Add dropout
+      </li></ul>
+      Make at least 4 changes to the network one at a time.  That is,
+      try one change, revert back to the original network, try another
+      change, and repeat.  The goal is to see the impact of one thing
+      by itself.  For each change, write up why you think it will help
+      or hurt, submit the test accuracy for all of the classes, and
+      explain what happened (did it help or hurt accuracy and why?).
+      Then, create a final network using as many modifications as you
+      like, say what they are, and submit the final test accuracy
+      over all of the classes.
+
+      <p>
+
+	At least one change must involve modifying the structure of
+	the network, i.e., the number of layers, the sizes of layers,
+	the numbers of filters, etc. 
+  </p><ul>
+
+
+</ul></li></ul></body></html>
